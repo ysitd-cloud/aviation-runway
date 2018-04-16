@@ -18,18 +18,18 @@ func ExtractSymbol(path string) (sym plugin.Symbol, err error) {
 		return
 	}
 
-	sym, err = p.Lookup(tower.ExportSymbolName)
+	sym, err = p.Lookup(runway.ExportSymbolName)
 
 	return
 }
 
-func ValidateFlyer(path string) (flyer tower.Flyer, err error) {
+func ValidateFlyer(path string) (flyer runway.Flyer, err error) {
 	sym, err := ExtractSymbol(path)
 	if err != nil {
 		return
 	}
 
-	flyer, ok := sym.(tower.Flyer)
+	flyer, ok := sym.(runway.Flyer)
 	if !ok {
 		return nil, ErrFlyerCast
 	}
@@ -37,13 +37,13 @@ func ValidateFlyer(path string) (flyer tower.Flyer, err error) {
 	return
 }
 
-func ValidateAirline(path string) (airline tower.Airline, err error) {
+func ValidateAirline(path string) (airline runway.Airline, err error) {
 	flyer, err := ValidateFlyer(path)
 	if err != nil {
 		return
 	}
 
-	airline, ok := flyer.(tower.Airline)
+	airline, ok := flyer.(runway.Airline)
 	if !ok {
 		return nil, ErrAirlineCast
 	}
