@@ -1,4 +1,4 @@
-package tower
+package runway
 
 import (
 	"context"
@@ -9,4 +9,3 @@ type Flyer interface {
 	Initial(ctx context.Context) error
 	GetHandler() http.Handler
 }
-

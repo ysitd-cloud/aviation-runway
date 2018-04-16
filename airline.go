@@ -1,4 +1,4 @@
-package tower
+package runway
 
 type Airline interface {
 	Flyer
