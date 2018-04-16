@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"code.ysitd.cloud/component/aviation/tower/validate"
+	"code.ysitd.cloud/component/aviation/runway/validate"
 	"sync"
 )
 

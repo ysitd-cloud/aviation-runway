@@ -4,7 +4,7 @@ import (
 	"errors"
 	"plugin"
 
-	"code.ysitd.cloud/component/aviation/tower"
+	"code.ysitd.cloud/component/aviation/runway"
 )
 
 var (
